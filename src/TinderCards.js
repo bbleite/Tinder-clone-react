@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
 import './TinderCards.css';
 
@@ -11,8 +11,15 @@ function TinderCards() {
         {
             name: "Mark Zuckerberg",
             url: "https://ca-times.brightspotcdn.com/dims4/default/09cc652/2147483647/strip/true/crop/4914x3276+0+0/resize/840x560!/quality/90/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F96%2F50%2F6f39063140808819fd2de84d14bd%2Ffacebook-scientists-letter-40005.jpg"
-        },
+        }
     ]);
+
+    // Piece of code which runs based on a condition
+   useEffect(() => {
+
+
+    //This will run ONCE when the component loads, and never again
+   }, []);
 
 
     return (
