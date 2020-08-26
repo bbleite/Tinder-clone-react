@@ -6,7 +6,7 @@ import IconButton from '@material-ui/core/IconButton';
 
 function Header() {
     return (
-        <div className="header">
+        <header className="header">
             <IconButton>
             <PersonIcon className="header__icon" fontSize="large" />
             </IconButton>
@@ -19,7 +19,7 @@ function Header() {
             <IconButton>
             <ForumIcon className="header__icon" fontSize="large" />
             </IconButton>
-        </div>
+        </header>
     )
 }
 
