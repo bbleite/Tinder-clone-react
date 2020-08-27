@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import TinderCard from 'react-tinder-card';
-//import database from "./firebase.js";
+import database from "./firebase";
 import './TinderCards.css';
 
 function TinderCards() {
@@ -9,20 +9,22 @@ function TinderCards() {
     // Piece of code which runs based on a condition
     useEffect(() => {
 
-        // database
-        //     .collection("people")
-        //     .onSnapshot((snapshot) => 
-        //         setPeople(snapshot.docs.map((doc) => doc.data()))
-        //     );
+        const unsubscribe = database
+            .collection("people")
+            .onSnapshot((snapshot) =>
+                setPeople(snapshot.docs.map((doc) => doc.data()))
+            );
 
-
+        return () => {
+            //this is the cleanup...
+            unsubscribe();
+        }
         //This will run ONCE when the component loads, and never again
     }, []);
 
 
     return (
         <div>
-            <h1>Tinder cards</h1>
             <div className="tinderCards__cardContainer">
                 {people.map((person) => (
                     <TinderCard
