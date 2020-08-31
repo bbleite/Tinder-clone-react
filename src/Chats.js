@@ -14,7 +14,7 @@ function Chats() {
             />
 
             <Chat
-                name="Elen"
+                name="Ellen"
                 message="How are you"
                 timestamp="55 min ago"
                 profilePic="https://media2.s-nbcnews.com/j/newscms/2020_34/3405827/200819-ellen-degeneres-al-1159_d74a8d3ac7ae09eccbd28c97bf858767.fit-760w.jpg"
