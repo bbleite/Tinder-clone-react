@@ -15,7 +15,7 @@ function Header({ backButton }) {
 
             {backButton ? (
                 <IconButton onClick={() => history.replace(backButton)}> 
-                    <ArrowBackIosIcon className="header__arorw" fontSize="large" />
+                    <ArrowBackIosIcon className="header__icon" fontSize="large" />
                 </IconButton>
             ) : (
                     <IconButton>
